@@ -1,0 +1,178 @@
+name: CoreCommands
+version: '${version}'
+main: ru.core.commands.CoreCommandsPlugin
+api-version: '1.21'
+authors: [CoreCommands]
+description: Lightweight Essentials-style commands for Paper.
+softdepend: [Vault]
+
+commands:
+  corecommands:
+    description: Reload CoreCommands configuration
+    usage: /corecommands reload
+    aliases: [core]
+  balance:
+    description: View a balance
+    usage: /balance [player]
+    aliases: [bal]
+  pay:
+    description: Transfer money to another player
+    usage: /pay <player> <amount>
+  msg:
+    description: Send a private message
+    usage: /msg <player> <message>
+    aliases: [tell, w]
+  reply:
+    description: Reply to the last private message
+    usage: /reply <message>
+    aliases: [r]
+  ban:
+    description: Ban a player
+    usage: /ban <player> [time] [reason]
+  unban:
+    description: Remove a player ban
+    usage: /unban <player>
+  ipban:
+    description: Ban a player's IP address
+    usage: /ipban <player> [time] [reason]
+  mute:
+    description: Mute a player
+    usage: /mute <player> [time] [reason]
+  unmute:
+    description: Remove a player mute
+    usage: /unmute <player>
+  kick:
+    description: Kick a player
+    usage: /kick <player> [reason]
+  tpa:
+    description: Request teleportation to a player
+    usage: /tpa <player>
+  tpaccept:
+    description: Accept a teleport request
+    usage: /tpaccept
+  tpdeny:
+    description: Deny a teleport request
+    usage: /tpdeny
+  tp:
+    description: Teleport to a player
+    usage: /tp <player>
+  tphere:
+    description: Teleport a player to yourself
+    usage: /tphere <player>
+  spawn:
+    description: Teleport to spawn
+    usage: /spawn
+  setspawn:
+    description: Set the server spawn
+    usage: /setspawn
+  rtp:
+    description: Teleport to a random safe location
+    usage: /rtp
+  sethome:
+    description: Set a home
+    usage: /sethome [name]
+  home:
+    description: Teleport to a home
+    usage: /home [name]
+  delhome:
+    description: Delete a home
+    usage: /delhome [name]
+  homes:
+    description: List your homes
+    usage: /homes
+  ignore:
+    description: Toggle ignoring a player
+    usage: /ignore <player>
+  tps:
+    description: Show server performance
+    usage: /tps
+  vanish:
+    description: Toggle vanish
+    usage: /vanish
+  wipeplayer:
+    description: Permanently erase a player's plugin data
+    usage: /wipeplayer <player> [confirm <key>]
+
+permissions:
+  corecommands.reload:
+    default: op
+  core.balance:
+    default: true
+  core.balance.others:
+    default: op
+  core.pay:
+    default: true
+  core.msg:
+    default: true
+  core.reply:
+    default: true
+  core.ban.helper:
+    default: false
+  core.ban.moderator:
+    default: false
+  core.ban.permanent:
+    default: op
+  core.ipban.helper:
+    default: false
+  core.ipban.moderator:
+    default: false
+  core.ipban.permanent:
+    default: op
+  core.unban:
+    default: op
+  core.mute.helper:
+    default: false
+  core.mute.moderator:
+    default: false
+  core.mute.permanent:
+    default: op
+  core.unmute:
+    default: op
+  core.kick:
+    default: op
+  core.tpa:
+    default: true
+  core.tpaccept:
+    default: true
+  core.tpdeny:
+    default: true
+  core.tp:
+    default: op
+  core.tphere:
+    default: op
+  core.spawn:
+    default: true
+  core.setspawn:
+    default: op
+  core.rtp:
+    default: true
+  core.homes.default:
+    default: true
+  core.homes.vip:
+    default: false
+  core.homes.premium:
+    default: false
+  core.sethome:
+    default: true
+  core.home:
+    default: true
+  core.delhome:
+    default: true
+  core.homes:
+    default: true
+  core.ignore:
+    default: true
+  core.tps:
+    default: op
+  core.vanish.short:
+    default: false
+  core.vanish.long:
+    default: false
+  core.vanish.unlimited:
+    default: op
+  core.vanish.see:
+    default: false
+  core.wipeplayer:
+    default: op
+  core.bypass.cooldown:
+    default: op
