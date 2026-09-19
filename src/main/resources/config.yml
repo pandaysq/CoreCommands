@@ -1,0 +1,101 @@
+database:
+  file: corecommands.db
+
+economy:
+  minimum-payment: 0.01
+
+cooldowns:
+  pay: 3
+  msg: 1
+  tpa: 5
+  spawn: 5
+  rtp: 60
+  sethome: 3
+  home: 3
+  ignore: 1
+  vanish: 3
+  wipeplayer: 5
+
+teleport:
+  request-timeout: 60
+  warmup-seconds: 3
+  cancel-on-move: true
+
+spawn:
+  location: {}
+
+rtp:
+  world: world
+  min-radius: 100
+  max-radius: 3000
+  attempts: 12
+  max-y: 320
+
+homes:
+  default-name: home
+  limits:
+    default:
+      permission: core.homes.default
+      limit: 1
+    vip:
+      permission: core.homes.vip
+      limit: 3
+    premium:
+      permission: core.homes.premium
+      limit: 10
+
+punishments:
+  ban-tiers:
+    helper:
+      permission: core.ban.helper
+      max-duration: 1d
+      cooldown: 60
+    moderator:
+      permission: core.ban.moderator
+      max-duration: 30d
+      cooldown: 30
+    admin:
+      permission: core.ban.permanent
+      max-duration: permanent
+      cooldown: 0
+  ipban-tiers:
+    helper:
+      permission: core.ipban.helper
+      max-duration: 1d
+      cooldown: 60
+    moderator:
+      permission: core.ipban.moderator
+      max-duration: 30d
+      cooldown: 30
+    admin:
+      permission: core.ipban.permanent
+      max-duration: permanent
+      cooldown: 0
+  mute-tiers:
+    helper:
+      permission: core.mute.helper
+      max-duration: 1d
+      cooldown: 60
+    moderator:
+      permission: core.mute.moderator
+      max-duration: 30d
+      cooldown: 30
+    admin:
+      permission: core.mute.permanent
+      max-duration: permanent
+      cooldown: 0
+
+vanish:
+  tiers:
+    short:
+      permission: core.vanish.short
+      max-time: 5m
+    long:
+      permission: core.vanish.long
+      max-time: 1h
+    unlimited:
+      permission: core.vanish.unlimited
+      max-time: -1
+
+wipeplayer:
+  confirmation-seconds: 60
